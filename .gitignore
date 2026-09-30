@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Terraform
+infra/.terraform/
+infra/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+
+# Local IAM policy documents generated while following README setup steps
+# (contain real account IDs/ARNs and should never be committed)
+*-policy.json
+*-trust-policy.json
+*-permissions.json
+
+# OS / editor
+.DS_Store
