@@ -74,9 +74,18 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--color-navy);
+}
+
+.logo-mark {
+  height: 72px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
