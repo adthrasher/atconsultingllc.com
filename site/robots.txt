@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atconsultingllc.com/sitemap.xml

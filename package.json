@@ -1,0 +1,13 @@
+{
+  "name": "atconsultingllc-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint:html": "htmlhint \"site/**/*.html\"",
+    "check:links": "linkinator site/index.html --recurse --silent --skip \"^https://atconsultingllc.com\""
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "linkinator": "^6.0.4"
+  }
+}
