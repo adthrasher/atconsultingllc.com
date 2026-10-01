@@ -219,6 +219,57 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.5rem;
 }
 
+.faq-category {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.faq-category h2 {
+  text-align: left;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1.2em;
+  color: var(--color-accent, #2E8B8B);
+  font-weight: 700;
+}
+
+.faq-item[open] summary::before {
+  content: "\2212";
+}
+
+.faq-item p {
+  margin: 0.75rem 0 0;
+  color: #5A6672;
+}
+
+.faq-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
