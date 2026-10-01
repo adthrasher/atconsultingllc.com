@@ -196,6 +196,29 @@ a:hover { text-decoration: underline; }
   color: #5A6672;
 }
 
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prose h2 {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.prose p, .prose ul {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  margin-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

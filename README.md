@@ -546,3 +546,21 @@ preview, via `.github/workflows/preview.yml`:
   forks, by design; such PRs will fail at the "Configure AWS credentials" step and will not
   get a preview.
 
+## Analytics and uptime monitoring
+
+Both tools below are free-tier, self-service SaaS products — there's nothing to deploy or
+configure in this repo beyond what's already in place; set them up directly on each
+provider's site using an account you control.
+
+- **Analytics**: [GoatCounter](https://www.goatcounter.com/) (cookie-free, no personal data
+  collected). The tracking snippet is already embedded on every page
+  (`data-goatcounter="https://atconsultingllc.com/count"`). View stats by signing into your
+  GoatCounter account.
+- **Uptime monitoring**: [UptimeRobot](https://uptimerobot.com/) free tier (50 monitors,
+  5-minute checks, email/SMS alerts). To set up:
+  1. Sign up (or log in) at uptimerobot.com.
+  2. Add a new HTTP(s) monitor for `https://atconsultingllc.com/`, 5-minute interval.
+  3. Add an alert contact for the email that should receive downtime notifications.
+  4. The monitor will report "down" until the production site is deployed for the first time
+     (see "Ongoing deployment" above) — that's expected until then.
+
