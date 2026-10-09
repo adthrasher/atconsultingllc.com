@@ -4,6 +4,12 @@ variable "domain_name" {
   default     = "atconsultingllc.com"
 }
 
+variable "secondary_domain_names" {
+  description = "Additional domains that redirect to the primary domain_name via the CloudFront distribution"
+  type        = list(string)
+  default     = ["ashleythrasherconsulting.com"]
+}
+
 variable "aws_region" {
   description = "AWS region for non-CloudFront resources"
   type        = string
