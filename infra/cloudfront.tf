@@ -8,16 +8,21 @@ resource "aws_cloudfront_origin_access_control" "site" {
 resource "aws_cloudfront_function" "www_redirect" {
   name    = "www-to-apex-redirect"
   runtime = "cloudfront-js-2.0"
-  comment = "Redirect www subdomain to apex domain"
+  comment = "Redirect any non-primary alias domain to the canonical apex domain"
   publish = true
-  code    = file("${path.module}/functions/www-redirect.js")
+  code = templatefile("${path.module}/functions/redirect-to-primary.js.tftpl", {
+    primary_domain = var.domain_name
+  })
 }
 
 resource "aws_cloudfront_distribution" "site" {
   enabled             = true
   default_root_object = "index.html"
-  aliases             = [var.domain_name, "www.${var.domain_name}"]
-  price_class         = "PriceClass_100"
+  aliases = concat(
+    [var.domain_name, "www.${var.domain_name}"],
+    flatten([for d in var.secondary_domain_names : [d, "www.${d}"]])
+  )
+  price_class = "PriceClass_100"
 
   origin {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
