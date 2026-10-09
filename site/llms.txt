@@ -1,0 +1,21 @@
+# AT Consulting LLC
+
+> AT Consulting LLC helps athletic training programs prepare for CAATE (Commission on Accreditation of Athletic Training Education) accreditation. We are an independent consulting firm; we are not affiliated with or endorsed by CAATE or the Board of Certification (BOC).
+
+AT Consulting LLC provides consulting services for colleges and universities running athletic training programs — not individual certification support for practicing/licensed athletic trainers (that is handled separately by the BOC).
+
+## Services
+
+- Self-study report review and preparation
+- Mock site visits
+- Curriculum mapping against CAATE standards
+- Ongoing advisory support through the accreditation cycle
+
+See [services.html](https://atconsultingllc.com/services.html) for full details and [pricing.html](https://atconsultingllc.com/pricing.html) for packages.
+
+## Key pages
+
+- [Home](https://atconsultingllc.com/index.html): overview of services and positioning
+- [About](https://atconsultingllc.com/about.html): team background and experience
+- [Case Studies](https://atconsultingllc.com/case-studies.html): outcomes from past engagements
+- [Contact](https://atconsultingllc.com/contact.html): how to schedule a consultation

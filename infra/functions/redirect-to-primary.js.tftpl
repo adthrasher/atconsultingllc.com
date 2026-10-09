@@ -1,0 +1,17 @@
+function handler(event) {
+  var request = event.request;
+  var host = request.headers.host.value;
+  var primaryHost = '${primary_domain}';
+
+  if (host !== primaryHost) {
+    return {
+      statusCode: 301,
+      statusDescription: 'Moved Permanently',
+      headers: {
+        location: { value: 'https://' + primaryHost + request.uri }
+      }
+    };
+  }
+
+  return request;
+}
