@@ -1,8 +1,11 @@
 resource "aws_acm_certificate" "site" {
-  provider                  = aws.us_east_1
-  domain_name               = var.domain_name
-  subject_alternative_names = ["www.${var.domain_name}"]
-  validation_method         = "DNS"
+  provider    = aws.us_east_1
+  domain_name = var.domain_name
+  subject_alternative_names = concat(
+    ["www.${var.domain_name}"],
+    flatten([for d in var.secondary_domain_names : [d, "www.${d}"]])
+  )
+  validation_method = "DNS"
 
   lifecycle {
     create_before_destroy = true
